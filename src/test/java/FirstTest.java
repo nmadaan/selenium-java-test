@@ -24,7 +24,7 @@ public class FirstTest {
     @BeforeMethod
     public void setupTest (){
         //Create a new ChromeDriver
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
         driver = new ChromeDriver();
 
         //Go to www.swtestacademy.com
