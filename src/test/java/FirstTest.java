@@ -66,6 +66,17 @@ public class FirstTest {
         Assert.assertEquals(title, "Google", "Title assertion is passed!");
     }
 
+     @Test
+     public void secondTest () {
+        //Get page title
+        String id = driver.getId("gb_70");
+
+        //Print page's title
+        WebElement signtext = driver.findElement(By.Id(“gb_70”));
+	Assert.assertEquals("Sign in", signtext.getText());
+    }
+
+
     //-----------------------------------Test TearDown-----------------------------------
     @AfterMethod
     public void teardownTest (){
