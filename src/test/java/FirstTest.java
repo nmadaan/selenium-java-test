@@ -41,6 +41,15 @@ public class FirstTest {
         driver = new ChromeDriver(options);
 
         driver.navigate().to(testURL);
+        String path;
+        try {
+            File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            path = "./target/screenshots/" + source.getName();
+            FileUtils.copyFile(source, new File(path)); 
+        }
+        catch(IOException e) {
+            path = "Failed to capture screenshot: " + e.getMessage();
+        }
     }
 
     //-----------------------------------Tests-----------------------------------
