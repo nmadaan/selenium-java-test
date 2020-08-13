@@ -33,6 +33,8 @@ public class FirstTest {
     //-----------------------------------Test Setup-----------------------------------
     @BeforeMethod
     public void setupTest (){
+	long id = Thread.currentThread().getId();
+        System.out.println("Before test-method. Thread id is: " + id);
         //Create a new ChromeDriver
         System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
@@ -59,6 +61,8 @@ public class FirstTest {
     @Test
     public void firstTest () {
         //Get page title
+	     long id = Thread.currentThread().getId();
+        System.out.println("Before test-method. Thread id is: " + id);
         String title = driver.getTitle();
 
         //Print page's title
@@ -70,6 +74,8 @@ public class FirstTest {
 
      @Test
      public void secondTest () {
+	long id = Thread.currentThread().getId();
+        System.out.println("Before test-method. Thread id is: " + id);
        
         WebElement signtext = driver.findElement(By.id("gb_70"));
 	Assert.assertEquals("Sign in", signtext.getText());
@@ -79,6 +85,8 @@ public class FirstTest {
     //-----------------------------------Test TearDown-----------------------------------
     @AfterMethod
     public void teardownTest (){
+	long id = Thread.currentThread().getId();
+        System.out.println("Before test-method. Thread id is: " + id);
         //Close browser and end the session
         driver.quit();
     }
