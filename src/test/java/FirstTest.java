@@ -25,8 +25,7 @@ public class FirstTest {
 
     //-----------------------------------Global Variables-----------------------------------
     //Declare a Webdriver variable
-    public WebDriver driver;
-
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     //Declare a test URL variable
     public String testURL = "https://google.com";
 
