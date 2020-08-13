@@ -69,10 +69,7 @@ public class FirstTest {
 
      @Test
      public void secondTest () {
-        //Get page title
-        String id = driver.getId("gb_70");
-
-        //Print page's title
+       
         WebElement signtext = driver.findElement(By.Id("gb_70"));
 	Assert.assertEquals("Sign in", signtext.getText());
     }
