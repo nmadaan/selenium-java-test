@@ -21,7 +21,6 @@ class LocalDriverFactory {
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             driver = new ChromeDriver(options);
-            driver = new ChromeDriver();
             return driver;
         }
         return driver;
