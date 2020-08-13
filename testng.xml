@@ -8,7 +8,7 @@
 <test name="My First Selenium TestNG Test" group-by-instances="true">
     <parameter name="browserName" value="chrome"></parameter>
     <classes>
-        <class name="FirstTest"/>
+        <class name="ThreadLocalDemo"/>
     </classes>
 </test>
 </suite>
