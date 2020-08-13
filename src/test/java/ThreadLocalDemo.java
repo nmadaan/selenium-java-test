@@ -21,7 +21,7 @@ import java.util.Calendar;
  *              It opens swtestacademy homepage and prints and checks its title.
 *******************************************************************************/
 
-public class FirstTest {
+public class ThreadLocalDemo {
 
     public String testURL = "https://google.com";
 
@@ -34,6 +34,8 @@ public class FirstTest {
 	WebDriver driver=LocalDriverManager.getDriver();
 	driver.get(testURL);
 	String path;
+	Calendar calendar = Calendar.getInstance();
+	SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
         try {
             File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             path = "./target/screenshots/" + "success_screenshots_" + formater.format(calendar.getTime()) + ".png";
@@ -53,6 +55,8 @@ public class FirstTest {
 	WebDriver driver=LocalDriverManager.getDriver();
 	driver.get(testURL);
         String path;
+	Calendar calendar = Calendar.getInstance();
+	SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
         try {
             File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             path = "./target/screenshots/" + "success_screenshots_" + formater.format(calendar.getTime()) + ".png";
