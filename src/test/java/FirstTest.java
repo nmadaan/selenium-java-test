@@ -71,7 +71,7 @@ public class FirstTest {
      @Test
      public void secondTest () {
        
-        WebElement signtext = driver.findElement(By.Id("gb_70"));
+        WebElement signtext = driver.findElement(By.id("gb_70"));
 	Assert.assertEquals("Sign in", signtext.getText());
     }
 
