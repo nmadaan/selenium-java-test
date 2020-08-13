@@ -3,7 +3,7 @@
 
 <suite name="AllTestsSuite" parallel="methods" thread-count="2" >
 <listeners>
-<listener class-name="organized.chaos.WebDriverListener"></listener>
+<listener class-name="WebDriverListener"></listener>
 </listeners>
 <test name="My First Selenium TestNG Test">
     <parameter name="browserName" value="chrome"></parameter>
