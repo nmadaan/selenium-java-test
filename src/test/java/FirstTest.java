@@ -63,7 +63,7 @@ public class FirstTest {
         System.out.println("Page Title: " + title);
 
         //Assertion
-        Assert.assertEquals(title, "Google1", "Title assertion is passed!");
+        Assert.assertEquals(title, "Google", "Title assertion is passed!");
     }
 
     //-----------------------------------Test TearDown-----------------------------------
