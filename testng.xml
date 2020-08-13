@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="AllTestsSuite" parallel="tests" thread-count="2" >
+<suite name="AllTestsSuite" parallel="methods" thread-count="2" >
 <listeners>
 <listener class-name="organized.chaos.WebDriverListener"></listener>
 </listeners>
-<test name="My First Selenium TestNG Test" group-by-instances="true">
+<test name="My First Selenium TestNG Test">
     <parameter name="browserName" value="chrome"></parameter>
     <classes>
         <class name="ThreadLocalDemo"/>
