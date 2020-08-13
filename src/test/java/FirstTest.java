@@ -40,7 +40,7 @@ public class FirstTest {
         String path;
         try {
             File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            path = "./target/screenshots/" + "success_screenshots_" + formater.format(calendar.getTime()) + ".png");
+            path = "./target/screenshots/" + "success_screenshots_" + formater.format(calendar.getTime()) + ".png";
             FileUtils.copyFile(source, new File(path)); 
         }
         catch(IOException e) {
