@@ -39,6 +39,9 @@ public class FirstTest {
         driver = new ChromeDriver(options);
 
         driver.navigate().to(testURL);
+        Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+
         String path;
         try {
             File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
